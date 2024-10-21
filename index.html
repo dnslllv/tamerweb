@@ -1,187 +1,229 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тамер: Легенда, которую мы не заслуживали</title>
-  <style>
-    /* Reset margin and padding for all elements */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тамер — Легенда</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
 
-    /* Basic body styling */
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #1a1a1a;
-      color: #f2f2f2;
-      line-height: 1.6;
-      padding: 20px;
-      margin: 0;
-    }
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #8bc34a;
+        }
 
-    /* Container to centralize content */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #8bc34a;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-    /* Header styling */
-    header {
-      text-align: center;
-      padding: 20px;
-    }
+        nav {
+            margin: 20px 0;
+        }
 
-    h1, h2 {
-      color: #00FF00; /* Bright Green */
-    }
+        nav a {
+            color: #8bc34a;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
 
-    img {
-      width: 100%;
-      max-width: 400px;
-      margin: 10px auto;
-      display: block;
-      border-radius: 10px;
-    }
+        nav a:hover {
+            color: #fff;
+        }
 
-    .content {
-      padding: 20px;
-      background-color: #333;
-      border-radius: 10px;
-    }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
 
-    /* Footer styling */
-    footer {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #888;
-    }
+        .jokes {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-    /* Navbar styling */
-    .nav {
-      text-align: center;
-      margin: 20px 0;
-    }
+        .joke-text {
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #8bc34a;
+            transition: color 0.3s ease;
+        }
 
-    .nav a {
-      color: #00FF00;
-      text-decoration: none;
-      padding: 10px;
-      font-size: 18px;
-    }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #8bc34a;
+            color: #000;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
 
-    .nav a:hover {
-      text-decoration: underline;
-    }
+        .button:hover {
+            background-color: #7cb342;
+            transform: scale(1.1);
+        }
 
-    /* Media Queries for mobile */
-    @media screen and (max-width: 600px) {
-      body {
-        font-size: 16px;
-        padding: 10px;
-      }
+        .button:active {
+            transform: scale(1);
+        }
 
-      .container {
-        width: 100%;
-      }
+        .socials a {
+            color: #8bc34a;
+            font-size: 1.1em;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
 
-      h1, h2 {
-        text-align: center;
-      }
+        .socials a:hover {
+            color: #fff;
+        }
 
-      .content {
-        padding: 0 5px;
-      }
+        footer {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #8bc34a;
+            margin-top: 40px;
+        }
 
-      img {
-        width: 100%;
-        height: auto;
-      }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .jokes {
+                padding: 15px;
+            }
+            .button {
+                padding: 8px 15px;
+                font-size: 1em;
+            }
+        }
 
-      .nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    /* For tablets (601px to 1024px) */
-    @media screen and (min-width: 601px) and (max-width: 1024px) {
-      body {
-        font-size: 18px;
-      }
-
-      .container {
-        width: 90%;
-      }
-    }
-  </style>
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .joke-text {
+                font-size: 1.2em;
+            }
+            .button {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Main container -->
-  <div class="container">
-
-    <!-- Header with title -->
     <header>
-      <h1>Тамер: Легенда, которую мы не заслуживали</h1>
+        <h1>Тамер — Легенда</h1>
+        <nav>
+            <a href="#about">О Тамере</a>
+            <a href="#jokes">Шутки</a>
+            <a href="#credits">Кредиты</a>
+        </nav>
     </header>
+    <div class="container">
+        <section id="about">
+            <h2>О Тамере</h2>
+            <p>Тамер — это человек, который умудряется быть коротким и одновременно тупым, но мы все его любим. Жизнь без него была бы скучной! Легенда, которую невозможно забыть.</p>
+            <button class="button" onclick="displayFact()">Интересный факт о Тамере</button>
+        </section>
+        
+        <section id="jokes" class="jokes">
+            <h2>Шутки про Тамера</h2>
+            <p class="joke-text" id="joke">Нажми на кнопку, чтобы узнать шутку про Тамера!</p>
+            <button class="button" onclick="generateJoke()">Получить шутку</button>
+            <button class="button" onclick="generateRandomFact()">Узнать случайный факт</button>
+        </section>
 
-    <!-- Navbar for quick navigation -->
-    <nav class="nav">
-      <a href="#about">О Тaмере</a>
-      <a href="#jokes">Шутки о Тaмере</a>
-      <a href="#pictures">Фото Тaмера</a>
-      <a href="#credits">Кредиты</a>
-    </nav>
+        <section id="credits">
+            <h2>Кредиты</h2>
+            <p>Этот сайт был разработан с любовью и юмором для <strong>Тамера</strong>.</p>
+            <p>Автор: <a href="https://www.instagram.com/dnusalov" target="_blank" class="socials">@dnusalov</a></p>
+            <p>С поддержкой: <a href="https://www.instagram.com/t5merlan" target="_blank" class="socials">@t5merlan</a> (такой короткий, такой быстрый!)</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2024 Все права защищены. Тамер — Легенда.</p>
+    </footer>
 
-    <!-- About Section -->
-    <section id="about" class="content">
-      <h2>О Тaмере</h2>
-      <p>Тамер — это короткий парень с большим эго, которое невозможно сократить. Все думали, что он уходит за границу, чтобы учиться, но он просто пытался спрятаться от реальности.</p>
-      <p>Он отлично разбирается в важнейших вещах — например, в том, как есть чипсы и лежать на диване целый день.</p>
-    </section>
+    <script>
+        const jokes = [
+            "Тамер настолько короткий, что его можно взять в карман и носить как игрушку.",
+            "Тамер — это человек, который может потеряться в комнате без дверей.",
+            "Если бы Тамер был футболистом, он бы играл на позиции «ничего не видим».",
+            "Тамер как Wi-Fi — когда он рядом, все замедляется.",
+            "Как-то раз Тамер попытался прочитать книгу... Но страница была слишком большой.",
+            "Тамер говорит, что хочет стать великим игроком... но его рост не позволяет ему даже мяч поднимать.",
+            "Знаете, почему Тамер не носит часы? Потому что они указывают на его низкий рост.",
+            "Тамер настолько медленный, что даже черепаха обгоняет его в игре на компьютере.",
+            "Никто не знает, сколько весит Тамер... потому что весы с ним не справляются.",
+            "Тамер — это человек, который искренне верит, что ему повезет, даже если он найдет лужу под собой.",
+            "Тамер хочет стать великим... как гном в D&D.",
+            "Тамер — человек, который прыгает, но даже не достает до барьера.",
+            "Когда Тамер шутит, даже его тень смеется... но всегда немного позже.",
+            "Тамер однажды пробежал 100 метров... через два месяца его заметили.",
+            "Тамер — единственный человек, который может провалить тест по логике, не отвечая на вопросы.",
+            "Если бы Тамер был фауной, его бы называли «микро-зверем».",
+            "Тамер — это как загадка: чем больше ты думаешь о нём, тем больше вопросов возникает.",
+            "Знаете, почему Тамер всегда находит выход из ситуации? Потому что он слишком низкий, чтобы видеть стены.",
+            "Тамер хочет стать великим... как гном в D&D.",
+            "Тамер — человек, который искренне верит, что ему повезет, даже если он найдет лужу под собой."
+        ];
 
-    <!-- Jokes Section -->
-    <section id="jokes" class="content">
-      <h2>Шутки о Тэмере</h2>
-      <ul>
-        <li>Если бы Тaмер был больше, он был бы коротким.</li>
-        <li>Знаете, почему Тaмер всегда носит очки? Чтобы даже его зрение не могло его поднять.</li>
-        <li>Тaмеру дали стать футболистом, но оказалось, что его рост не подходит для футбольного поля, скорее для песочницы.</li>
-        <li>Почему Тaмер никогда не ходит в спортзал? Потому что его мышцы просто не могут выйти из комфорта.</li>
-        <li>Тaмер может быть недалеко от нас, но мы все равно не можем достать до его головы.</li>
-        <li>Если бы Тaмер был супергероем, его суперсила была бы... прятаться в тени.</li>
-        <li>Тaмер всегда падает на свои колени, потому что он слишком близко к земле!</li>
-        <li>Самое большое достижение Тaмера — это то, что он когда-то был в высоте.</li>
-        <li>Его мозг работает быстро, особенно когда он думает о том, как съесть еще один чипс.</li>
-        <li>Тaмер так низок, что когда он прыгает, он кажется, что уходит в подполье.</li>
-      </ul>
-    </section>
+        const facts = [
+            "Тамер может стоять на месте, и все вокруг подумают, что он исчез.",
+            "Тамер — самый быстрый человек, когда его ловит Wi-Fi.",
+            "Тамер был бы хорошим директором в компании... только если бы у него было колесо для передвижения.",
+            "Тамер — лидер во всем... если говорить о том, как его рост влияет на вещи.",
+            "Он всегда старается, но ему часто не хватает роста, чтобы достичь успеха."
+        ];
 
-    <!-- Picture Section -->
-    <section id="pictures" class="content">
-      <h2>Фото Тaмера</h2>
-      <img src="tamer-picture.jpg" alt="Фото Тaмера">
-    </section>
+        function generateJoke() {
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            document.getElementById("joke").textContent = randomJoke;
+        }
 
-    <!-- Credits Section -->
-    <section id="credits" class="content">
-      <h2>Кредиты</h2>
-      <p>Создано: <a href="https://www.instagram.com/dnusalov" target="_blank">@dnusalov</a></p>
-      <p>При поддержке: <a href="https://www.instagram.com/t5merlan" target="_blank">@t5merlan</a></p>
-      <p>Шутки и фотографии: Здесь нет данных, потому что Тaмер слишком занят!</p>
-    </section>
-  </div>
+        function generateRandomFact() {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            alert(randomFact);
+        }
 
-  <!-- Footer -->
-  <footer>
-    <p>Авторские права &copy; 2023. Всё для Тaмера, но без него!</p>
-  </footer>
-
+        function displayFact() {
+            alert("Тамер всегда старается и делает мир лучше!");
+        }
+    </script>
 </body>
 </html>
