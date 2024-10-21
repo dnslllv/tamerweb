@@ -1,237 +1,187 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тамер — Простой, но Уникальный</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1d1d1d; /* Dark background */
-            color: #e0e0e0; /* Light text */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            min-height: 600px;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тамер: Легенда, которую мы не заслуживали</title>
+  <style>
+    /* Reset margin and padding for all elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        h1 {
-            font-size: 2.5em;
-            color: #ffffff;
-            margin-bottom: 30px;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7); /* Darker shadow */
-        }
+    /* Basic body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a;
+      color: #f2f2f2;
+      line-height: 1.6;
+      padding: 20px;
+      margin: 0;
+    }
 
-        .content-box {
-            background-color: #292929; /* Darker content background */
-            padding: 40px;
-            border-radius: 10px;
-            max-width: 900px;
-            width: 100%;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Stronger shadow */
-            text-align: left;
-            transition: all 0.3s ease;
-        }
+    /* Container to centralize content */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-        /* Hover effect for content */
-        .content-box:hover {
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
-        }
+    /* Header styling */
+    header {
+      text-align: center;
+      padding: 20px;
+    }
 
-        /* Roast jokes */
-        .roast {
-            margin: 15px 0;
-            font-size: 1.2em;
-            color: #b0b0b0;
-            line-height: 1.6em;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+    h1, h2 {
+      color: #00FF00; /* Bright Green */
+    }
 
-        .roast:hover {
-            color: #4CAF50; /* Green on hover */
-            transform: translateX(5px);
-        }
+    img {
+      width: 100%;
+      max-width: 400px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 10px;
+    }
 
-        /* Buttons */
-        .btn {
-            background-color: #1d1d1d;
-            color: #e0e0e0;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            display: block;
-            margin: 15px auto;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        }
+    .content {
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+    }
 
-        .btn:hover {
-            background-color: #333333;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-        }
+    /* Footer styling */
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+    }
 
-        .btn-green {
-            background-color: #4CAF50;
-            color: white;
-        }
+    /* Navbar styling */
+    .nav {
+      text-align: center;
+      margin: 20px 0;
+    }
 
-        .btn-green:hover {
-            background-color: #45a049;
-        }
+    .nav a {
+      color: #00FF00;
+      text-decoration: none;
+      padding: 10px;
+      font-size: 18px;
+    }
 
-        /* Fact box */
-        .fact-box {
-            font-size: 1.2em;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #383838; /* Darker gray for the fact box */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-            color: #e0e0e0;
-            text-align: center;
-            border-left: 5px solid #4CAF50; /* Green border */
-        }
+    .nav a:hover {
+      text-decoration: underline;
+    }
 
-        /* Footer */
-        footer {
-            margin-top: 40px;
-            font-size: 1.1em;
-            color: #b0b0b0;
-            text-align: center;
-            opacity: 0.8;
-        }
+    /* Media Queries for mobile */
+    @media screen and (max-width: 600px) {
+      body {
+        font-size: 16px;
+        padding: 10px;
+      }
 
-        footer a {
-            text-decoration: none;
-            color: #4CAF50;
-            transition: color 0.3s ease;
-        }
+      .container {
+        width: 100%;
+      }
 
-        footer a:hover {
-            color: #45a049;
-        }
+      h1, h2 {
+        text-align: center;
+      }
 
-        /* Credits */
-        .credits {
-            font-size: 1.1em;
-            color: #b0b0b0;
-            margin-top: 20px;
-        }
+      .content {
+        padding: 0 5px;
+      }
 
-        .credits a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
+      img {
+        width: 100%;
+        height: auto;
+      }
 
-        .credits a:hover {
-            color: #45a049;
-            text-decoration: underline;
-        }
+      .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
 
-        /* Extra button style */
-        .extra-btn {
-            background-color: #e0e0e0;
-            color: #292929;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-        }
+    /* For tablets (601px to 1024px) */
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+      body {
+        font-size: 18px;
+      }
 
-        .extra-btn:hover {
-            background-color: #ccc;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            .content-box {
-                padding: 20px;
-            }
-
-            .roast {
-                font-size: 1em;
-            }
-
-            .btn, .extra-btn {
-                font-size: 1em;
-            }
-        }
-    </style>
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="content-box">
-        <h1>Тамер — Простой, но Уникальный</h1>
+  <!-- Main container -->
+  <div class="container">
 
-        <p class="roast">Тамер настолько короткий, что даже его отражение в зеркале выглядит смущенным.</p>
-        <p class="roast">Когда Тамер выходит из дома, его тень сначала спрашивает, куда он идет.</p>
-        <p class="roast">Если бы Тамер был футболистом, его место на поле было бы... на скамейке.</p>
-        <p class="roast">Тамер — это живое доказательство, что некоторые люди не могут сделать карьеру в спорте, но, наверное, они просто сильно пытались.</p>
-        <p class="roast">Тамер так быстро забывает вещи, что даже его телефон говорит: "Серьезно?"</p>
-        <p class="roast">Когда Тамер обыгрывает соперников в футболе, они ему говорят "Спасибо за участие!"</p>
+    <!-- Header with title -->
+    <header>
+      <h1>Тамер: Легенда, которую мы не заслуживали</h1>
+    </header>
 
-        <!-- Buttons for more interaction -->
-        <button class="btn btn-green" onclick="generateFact()">Случайный факт о Тамере</button>
-        <button class="extra-btn" onclick="tellJoke()">Рассмешить Тамера</button>
-        <button class="extra-btn" onclick="makeTamerRun()">Заставить Тамера бегать</button>
+    <!-- Navbar for quick navigation -->
+    <nav class="nav">
+      <a href="#about">О Тэмере</a>
+      <a href="#jokes">Шутки о Тэмере</a>
+      <a href="#pictures">Фото Тэмера</a>
+      <a href="#credits">Кредиты</a>
+    </nav>
 
-        <!-- Random fact section -->
-        <div class="fact-box" id="fact">
-            Нажмите кнопку, чтобы узнать случайный факт о Тамере!
-        </div>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="content">
+      <h2>О Тэмере</h2>
+      <p>Тамер — это короткий парень с большим эго, которое невозможно сократить. Все думали, что он уходит за границу, чтобы учиться, но он просто пытался спрятаться от реальности.</p>
+      <p>Он отлично разбирается в важнейших вещах — например, в том, как есть чипсы и лежать на диване целый день.</p>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Этот сайт посвящён нашему другу Тамеру — уникальной личности. Сделано с любовью и уважением.</p>
-        <p>Вы можете найти больше о Тaмере и его приключениях <a href="https://github.com" target="_blank">на GitHub</a>.</p>
+    <!-- Jokes Section -->
+    <section id="jokes" class="content">
+      <h2>Шутки о Тэмере</h2>
+      <ul>
+        <li>Если бы Тэмер был больше, он был бы коротким.</li>
+        <li>Знаете, почему Тэмер всегда носит очки? Чтобы даже его зрение не могло его поднять.</li>
+        <li>Тэмеру дали стать футболистом, но оказалось, что его рост не подходит для футбольного поля, скорее для песочницы.</li>
+        <li>Почему Тэмер никогда не ходит в спортзал? Потому что его мышцы просто не могут выйти из комфорта.</li>
+        <li>Тэмер может быть недалеко от нас, но мы все равно не можем достать до его головы.</li>
+        <li>Если бы Тэмер был супергероем, его суперсила была бы... прятаться в тени.</li>
+        <li>Тэмер всегда падает на свои колени, потому что он слишком близко к земле!</li>
+        <li>Самое большое достижение Тэмера — это то, что он когда-то был в высоте.</li>
+        <li>Его мозг работает быстро, особенно когда он думает о том, как съесть еще один чипс.</li>
+        <li>Тэмер так низок, что когда он прыгает, он кажется, что уходит в подполье.</li>
+      </ul>
+    </section>
 
-        <!-- Credits Section -->
-        <div class="credits">
-            <p>Создано <a href="https://www.instagram.com/dnusalov/" target="_blank">@dnusalov</a>. Ну а Тамер... ну, его профиль тоже там — <a href="https://www.instagram.com/t5merlan/" target="_blank">@t5merlan</a>, но что-то я сомневаюсь, что он знает, как пользоваться Instagram. <span style="color: #ff5555;">(Потому что он так же медлителен, как его Wi-Fi)</span></p>
-        </div>
-    </footer>
+    <!-- Picture Section -->
+    <section id="pictures" class="content">
+      <h2>Фото Тэмера</h2>
+      <img src="tamer-picture.jpg" alt="Фото Тэмера">
+    </section>
 
-    <!-- Script to generate random fact and interactions -->
-    <script>
-        const facts = [
-            'Тамер однажды пытался открыть дверь с помощью USB-кабеля.',
-            'Тамер настолько ленив, что его шагомер считает только его мысли.',
-            'Однажды Тамер забыл пароль и решил, что компьютер сломался.',
-            'Тамер уверен, что паутина в углах комнаты — это бесплатный Wi-Fi.',
-            'Тамер просыпается с чувством, что его будильник настроен против него.'
-        ];
+    <!-- Credits Section -->
+    <section id="credits" class="content">
+      <h2>Кредиты</h2>
+      <p>Создано: <a href="https://www.instagram.com/dnusalov" target="_blank">@dnusalov</a></p>
+      <p>При поддержке: <a href="https://www.instagram.com/t5merlan" target="_blank">@t5merlan</a></p>
+      <p>Шутки и фотографии: Здесь нет данных, потому что Тэмер слишком занят!</p>
+    </section>
+  </div>
 
-        function generateFact() {
-            const randomFact = facts[Math.floor(Math.random() * facts.length)];
-            document.getElementById("fact").innerText = randomFact;
-        }
-
-        function tellJoke() {
-            alert('Почему Тамер не может найти свою обувь? Потому что она убежала от него в другой угол комнаты!');
-        }
-
-        function makeTamerRun() {
-            alert('Тамер бегает... к холодильнику! Да, только там и бегает.');
-        }
-    </script>
+  <!-- Footer -->
+  <footer>
+    <p>Авторские права &copy; 2023. Всё для Тэмера, но без него!</p>
+  </footer>
 
 </body>
 </html>
