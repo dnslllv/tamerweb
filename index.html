@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тамер — Простой, но Уникальный</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1d1d1d; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            min-height: 600px;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7); /* Darker shadow */
+        }
+
+        .content-box {
+            background-color: #292929; /* Darker content background */
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for content */
+        .content-box:hover {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Roast jokes */
+        .roast {
+            margin: 15px 0;
+            font-size: 1.2em;
+            color: #b0b0b0;
+            line-height: 1.6em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .roast:hover {
+            color: #4CAF50; /* Green on hover */
+            transform: translateX(5px);
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: #1d1d1d;
+            color: #e0e0e0;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 15px auto;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn:hover {
+            background-color: #333333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .btn-green {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-green:hover {
+            background-color: #45a049;
+        }
+
+        /* Fact box */
+        .fact-box {
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #383838; /* Darker gray for the fact box */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            color: #e0e0e0;
+            text-align: center;
+            border-left: 5px solid #4CAF50; /* Green border */
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: #b0b0b0;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #4CAF50;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #45a049;
+        }
+
+        /* Credits */
+        .credits {
+            font-size: 1.1em;
+            color: #b0b0b0;
+            margin-top: 20px;
+        }
+
+        .credits a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .credits a:hover {
+            color: #45a049;
+            text-decoration: underline;
+        }
+
+        /* Extra button style */
+        .extra-btn {
+            background-color: #e0e0e0;
+            color: #292929;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .extra-btn:hover {
+            background-color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+
+            .roast {
+                font-size: 1em;
+            }
+
+            .btn, .extra-btn {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-box">
+        <h1>Тамер — Простой, но Уникальный</h1>
+
+        <p class="roast">Тамер настолько короткий, что даже его отражение в зеркале выглядит смущенным.</p>
+        <p class="roast">Когда Тамер выходит из дома, его тень сначала спрашивает, куда он идет.</p>
+        <p class="roast">Если бы Тамер был футболистом, его место на поле было бы... на скамейке.</p>
+        <p class="roast">Тамер — это живое доказательство, что некоторые люди не могут сделать карьеру в спорте, но, наверное, они просто сильно пытались.</p>
+        <p class="roast">Тамер так быстро забывает вещи, что даже его телефон говорит: "Серьезно?"</p>
+        <p class="roast">Когда Тамер обыгрывает соперников в футболе, они ему говорят "Спасибо за участие!"</p>
+
+        <!-- Buttons for more interaction -->
+        <button class="btn btn-green" onclick="generateFact()">Случайный факт о Тамере</button>
+        <button class="extra-btn" onclick="tellJoke()">Рассмешить Тамера</button>
+        <button class="extra-btn" onclick="makeTamerRun()">Заставить Тамера бегать</button>
+
+        <!-- Random fact section -->
+        <div class="fact-box" id="fact">
+            Нажмите кнопку, чтобы узнать случайный факт о Тамере!
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Этот сайт посвящён нашему другу Тамеру — уникальной личности. Сделано с любовью и уважением.</p>
+        <p>Вы можете найти больше о Тaмере и его приключениях <a href="https://github.com" target="_blank">на GitHub</a>.</p>
+
+        <!-- Credits Section -->
+        <div class="credits">
+            <p>Создано <a href="https://www.instagram.com/dnusalov/" target="_blank">@dnusalov</a>. Ну а Тамер... ну, его профиль тоже там — <a href="https://www.instagram.com/t5merlan/" target="_blank">@t5merlan</a>, но что-то я сомневаюсь, что он знает, как пользоваться Instagram. <span style="color: #ff5555;">(Потому что он так же медлителен, как его Wi-Fi)</span></p>
+        </div>
+    </footer>
+
+    <!-- Script to generate random fact and interactions -->
+    <script>
+        const facts = [
+            'Тамер однажды пытался открыть дверь с помощью USB-кабеля.',
+            'Тамер настолько ленив, что его шагомер считает только его мысли.',
+            'Однажды Тамер забыл пароль и решил, что компьютер сломался.',
+            'Тамер уверен, что паутина в углах комнаты — это бесплатный Wi-Fi.',
+            'Тамер просыпается с чувством, что его будильник настроен против него.'
+        ];
+
+        function generateFact() {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("fact").innerText = randomFact;
+        }
+
+        function tellJoke() {
+            alert('Почему Тамер не может найти свою обувь? Потому что она убежала от него в другой угол комнаты!');
+        }
+
+        function makeTamerRun() {
+            alert('Тамер бегает... к холодильнику! Да, только там и бегает.');
+        }
+    </script>
+
+</body>
+</html>
